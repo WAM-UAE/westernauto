@@ -8,7 +8,7 @@
 
   // ── STRINGS ─────────────────────────────────────────────
   var T = {
-    greeting:       'Hi there! 👋 Welcome to Western Auto & Marine.',
+    greeting:       'Hi there! 👋 Welcome to Western Auto and Marine.',
     howHelp:        'How can we help you today?',
     services:       ['Car Servicing', 'Bike & Quad Servicing', 'Jet Ski Servicing', 'Boat Engine Servicing', 'Painting', 'Diagnostics & Repairs', 'Other'],
     greatChoice:    'Great choice! 👌 May I ask your name?',
@@ -47,7 +47,7 @@
     '<div id="wam-chat-header">' +
       '<div class="wam-avatar">🔧</div>' +
       '<div class="wam-header-info">' +
-        '<h4>Western Auto & Marine</h4>' +
+        '<h4>Western Auto and Marine</h4>' +
         '<p><span class="wam-online-dot"></span>' + T.headerSub + '</p>' +
       '</div>' +
     '</div>' +
