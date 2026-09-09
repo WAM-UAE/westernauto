@@ -4,9 +4,9 @@
    ========================================================================== */
 
 :root {
-  --ink:        #0A2027;   /* near-black navy, deep water at night */
-  --tideline:   #123B47;   /* main dark teal-navy */
-  --tideline-2: #1D5566;   /* lighter teal for gradients/hover */
+  --ink:        #0A0A0A;   /* true black */
+  --tideline:   #1C1C1C;   /* dark charcoal */
+  --tideline-2: #303030;   /* lighter charcoal for gradients/hover */
   --steel:      #5C7580;   /* muted steel gray-blue */
   --dune:       #EFE6D2;   /* warm sand, light bg */
   --dune-2:     #E3D5B4;   /* deeper sand for cards */
@@ -116,13 +116,13 @@ a:focus-visible, button:focus-visible {
 }
 .logo-mark {
   display: block;
-  height: 46px;
+  height: 92px;
   width: auto;
   border-radius: 8px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.45);
   flex-shrink: 0;
 }
-.footer-brand .logo-mark { height: 84px; border-radius: 10px; }
+.footer-brand .logo-mark { height: 168px; border-radius: 10px; }
 
 .main-nav {
   display: flex;
@@ -466,7 +466,7 @@ section { padding: 72px 0; }
 
 @media (max-width: 480px) {
   .logo { font-size: 1.05rem; }
-  .logo-mark { height: 34px; }
+  .logo-mark { height: 68px; }
   .logo .tag { display: none; }
 }
 
