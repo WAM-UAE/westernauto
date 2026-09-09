@@ -101,8 +101,8 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
 }
 .logo span.amp { color: var(--brass); }
 .logo .tag {
@@ -114,6 +114,15 @@ a:focus-visible, button:focus-visible {
   display: block;
   margin-top: 2px;
 }
+.logo-mark {
+  display: block;
+  height: 46px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.45);
+  flex-shrink: 0;
+}
+.footer-brand .logo-mark { height: 84px; border-radius: 10px; }
 
 .main-nav {
   display: flex;
@@ -453,6 +462,12 @@ section { padding: 72px 0; }
   .header-actions .btn-outline { display: none; }
   .hero-stats { grid-template-columns: repeat(2, auto); }
   .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 1.05rem; }
+  .logo-mark { height: 34px; }
+  .logo .tag { display: none; }
 }
 
 /* ==========================================================================
