@@ -294,13 +294,16 @@ a:focus-visible, button:focus-visible {
 
 section { padding: 72px 0; }
 .section-dune { background: var(--dune); }
-.section-white { background: var(--white); }
+.section-white { background: var(--ink); color: var(--dune); }
+.section-white h2, .section-white h3, .section-white h4 { color: var(--white); }
+.section-white .eyebrow { color: var(--brass); }
 .section-ink { background: var(--ink); color: var(--dune); }
 .section-ink h2 { color: var(--white); }
 
 .section-head { max-width: 620px; margin-bottom: 44px; }
 .section-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-top: 8px; }
 .section-head p { color: var(--steel); margin-top: 14px; font-size: 1.02rem; }
+.section-white .section-head p { color: var(--dune); }
 
 /* ==========================================================================
    Divide/anchor lines — the auto-side & marine-side motif
@@ -359,8 +362,8 @@ section { padding: 72px 0; }
   gap: 24px;
 }
 .value-card {
-  background: var(--white);
-  border: 1px solid var(--dune-2);
+  background: var(--tideline);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
   padding: 28px 24px;
 }
@@ -371,7 +374,7 @@ section { padding: 72px 0; }
   margin-bottom: 10px;
 }
 .value-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.value-card p { font-size: 0.92rem; color: var(--steel); }
+.value-card p { font-size: 0.92rem; color: var(--dune); }
 
 /* ==========================================================================
    Services strip
@@ -381,15 +384,15 @@ section { padding: 72px 0; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1px;
-  background: var(--dune-2);
-  border: 1px solid var(--dune-2);
+  background: var(--tideline-2);
+  border: 1px solid var(--tideline-2);
 }
 .service-item {
-  background: var(--white);
+  background: var(--tideline);
   padding: 26px 24px;
   transition: background 0.15s ease;
 }
-.service-item:hover { background: var(--dune); }
+.service-item:hover { background: var(--tideline-2); }
 .service-item h4 {
   font-size: 1.02rem;
   margin-bottom: 6px;
@@ -398,7 +401,7 @@ section { padding: 72px 0; }
   gap: 10px;
 }
 .service-item h4 .dot { width: 8px; height: 8px; background: var(--brass); border-radius: 50%; display: inline-block; }
-.service-item p { font-size: 0.88rem; color: var(--steel); }
+.service-item p { font-size: 0.88rem; color: var(--dune); }
 
 /* ==========================================================================
    Trust strip / location
@@ -499,8 +502,8 @@ section { padding: 72px 0; }
    ========================================================================== */
 
 .blog-card {
-  background: var(--white);
-  border: 1px solid var(--dune-2);
+  background: var(--tideline);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
   padding: 28px 24px;
   display: flex;
@@ -512,12 +515,12 @@ section { padding: 72px 0; }
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.72rem;
-  color: var(--brass-dark);
+  color: var(--brass);
 }
 .blog-card h3 { font-size: 1.25rem; }
-.blog-card p { font-size: 0.95rem; color: var(--steel); }
-.blog-card .read-more { font-weight: 700; color: var(--tideline); font-size: 0.88rem; margin-top: 6px; }
-.blog-card .read-more:hover { color: var(--brass-dark); }
+.blog-card p { font-size: 0.95rem; color: var(--dune); }
+.blog-card .read-more { font-weight: 700; color: var(--brass); font-size: 0.88rem; margin-top: 6px; }
+.blog-card .read-more:hover { color: var(--white); }
 
 .article-meta {
   color: var(--dune);
@@ -529,12 +532,12 @@ section { padding: 72px 0; }
 
 .article-content { max-width: 72ch; margin: 0 auto; }
 .article-content p { margin-bottom: 20px; font-size: 1.02rem; }
-.article-content h2 { font-size: 1.5rem; margin: 40px 0 16px; color: var(--tideline); }
+.article-content h2 { font-size: 1.5rem; margin: 40px 0 16px; color: var(--brass); }
 .article-content h3 { font-size: 1.15rem; margin: 28px 0 12px; }
 .article-content ul, .article-content ol { margin: 0 0 20px 22px; }
 .article-content li { margin-bottom: 8px; font-size: 1rem; }
 .article-content .callout {
-  background: var(--dune-2);
+  background: var(--tideline);
   border-left: 4px solid var(--brass);
   padding: 20px 24px;
   border-radius: var(--radius);
