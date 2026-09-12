@@ -1,0 +1,16 @@
+# Cache control — prevents visitors' browsers from showing stale pages
+# after a deploy. HTML always revalidates with the server; CSS/JS are
+# safe to cache long-term because they're loaded with a manual ?v=N
+# cache-busting query string that changes whenever the file changes.
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
