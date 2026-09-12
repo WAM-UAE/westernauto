@@ -67,18 +67,34 @@
   // hide input initially (choices used first)
   setInputVisible(false);
 
-  // ── AUTO-OPEN ────────────────────────────────────────────
-  setTimeout(function () {
+  // ── AUTO-OPEN (home page only) ──────────────────────────
+  var started = false;
+  var isHome = /(^|\/)(index\.html)?$/.test(window.location.pathname);
+
+  function openWidget() {
     win.classList.add('visible');
     launcher.classList.add('open');
-    startConversation();
-  }, 800);
+    if (!started) {
+      started = true;
+      startConversation();
+    }
+  }
+
+  if (isHome) {
+    setTimeout(openWidget, 800);
+  }
 
   // ── TOGGLE (click to minimise/reopen) ───────────────────
   launcher.addEventListener('click', function () {
     var isOpen = win.classList.toggle('visible');
     launcher.classList.toggle('open', isOpen);
-    if (isOpen) setTimeout(scrollBottom, 50);
+    if (isOpen) {
+      if (!started) {
+        started = true;
+        startConversation();
+      }
+      setTimeout(scrollBottom, 50);
+    }
   });
 
   // ── CONVERSATION ────────────────────────────────────────
