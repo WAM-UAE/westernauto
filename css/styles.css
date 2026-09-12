@@ -330,6 +330,13 @@ section { padding: 72px 0; }
 }
 .section-photo.banner img { aspect-ratio: 21 / 9; }
 
+.photo-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 44px;
+}
+
 /* ==========================================================================
    Divide/anchor lines — the auto-side & marine-side motif
    ========================================================================== */
@@ -508,6 +515,10 @@ section { padding: 72px 0; }
   .divide { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .section-head-media { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .photo-duo { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
