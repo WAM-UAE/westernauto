@@ -294,8 +294,8 @@ a:focus-visible, button:focus-visible {
 
 section { padding: 72px 0; }
 .section-dune { background: var(--dune); }
-.section-white { background: var(--ink); color: var(--dune); }
-.section-white h2, .section-white h3, .section-white h4 { color: var(--white); }
+.section-white { background: var(--ink); color: var(--white); }
+.section-white h2, .section-white h3, .section-white h4 { color: var(--brass); }
 .section-white .eyebrow { color: var(--brass); }
 .section-ink { background: var(--ink); color: var(--dune); }
 .section-ink h2 { color: var(--white); }
@@ -303,7 +303,7 @@ section { padding: 72px 0; }
 .section-head { max-width: 620px; margin-bottom: 44px; }
 .section-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-top: 8px; }
 .section-head p { color: var(--steel); margin-top: 14px; font-size: 1.02rem; }
-.section-white .section-head p { color: var(--dune); }
+.section-white .section-head p { color: var(--white); }
 
 /* ==========================================================================
    Divide/anchor lines — the auto-side & marine-side motif
@@ -374,7 +374,7 @@ section { padding: 72px 0; }
   margin-bottom: 10px;
 }
 .value-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.value-card p { font-size: 0.92rem; color: var(--dune); }
+.value-card p { font-size: 0.92rem; color: var(--white); }
 
 /* ==========================================================================
    Services strip
@@ -401,7 +401,7 @@ section { padding: 72px 0; }
   gap: 10px;
 }
 .service-item h4 .dot { width: 8px; height: 8px; background: var(--brass); border-radius: 50%; display: inline-block; }
-.service-item p { font-size: 0.88rem; color: var(--dune); }
+.service-item p { font-size: 0.88rem; color: var(--white); }
 
 /* ==========================================================================
    Trust strip / location
@@ -518,7 +518,7 @@ section { padding: 72px 0; }
   color: var(--brass);
 }
 .blog-card h3 { font-size: 1.25rem; }
-.blog-card p { font-size: 0.95rem; color: var(--dune); }
+.blog-card p { font-size: 0.95rem; color: var(--white); }
 .blog-card .read-more { font-weight: 700; color: var(--brass); font-size: 0.88rem; margin-top: 6px; }
 .blog-card .read-more:hover { color: var(--white); }
 
