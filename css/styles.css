@@ -306,6 +306,31 @@ section { padding: 72px 0; }
 .section-white .section-head p { color: var(--white); }
 
 /* ==========================================================================
+   Showcase photos — real workshop &amp; service photography
+   ========================================================================== */
+
+.section-head-media {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 44px;
+}
+.section-head-media .section-head { margin-bottom: 0; }
+.section-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+}
+.section-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.section-photo.banner img { aspect-ratio: 21 / 9; }
+
+/* ==========================================================================
    Divide/anchor lines — the auto-side & marine-side motif
    ========================================================================== */
 
@@ -482,6 +507,7 @@ section { padding: 72px 0; }
   .hero-grid { grid-template-columns: 1fr; }
   .divide { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .section-head-media { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
