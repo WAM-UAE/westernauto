@@ -763,3 +763,47 @@ section { padding: 72px 0; }
 .article-content .callout h3 { margin-top: 0; }
 .article-content .callout p:last-child,
 .article-content .callout ul:last-child { margin-bottom: 0; }
+
+/* ==========================================================================
+   Social rail — fixed vertical stack, right edge
+   ========================================================================== */
+
+.social-rail {
+  position: fixed;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 250;
+}
+.social-rail a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+.social-rail a:hover {
+  border-color: var(--brass);
+  background: var(--brass);
+  color: var(--ink);
+  transform: scale(1.08);
+}
+.social-rail svg { width: 20px; height: 20px; }
+
+@media (max-width: 900px) {
+  .social-rail {
+    right: 0.6rem;
+    gap: 8px;
+  }
+  .social-rail a { width: 36px; height: 36px; }
+  .social-rail svg { width: 17px; height: 17px; }
+}
