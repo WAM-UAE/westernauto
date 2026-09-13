@@ -770,17 +770,16 @@ section { padding: 72px 0; }
 
 .social-rail {
   position: fixed;
-  top: 50%;
+  top: 140px;
   right: 1.25rem;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
   z-index: 250;
 }
 .social-rail a {
-  width: 42px;
-  height: 42px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   background: var(--ink);
   border: 1px solid rgba(255,255,255,0.25);
@@ -797,13 +796,14 @@ section { padding: 72px 0; }
   color: var(--ink);
   transform: scale(1.08);
 }
-.social-rail svg { width: 20px; height: 20px; }
+.social-rail svg { width: 26px; height: 26px; }
 
 @media (max-width: 900px) {
   .social-rail {
+    top: 110px;
     right: 0.6rem;
-    gap: 8px;
+    gap: 10px;
   }
-  .social-rail a { width: 36px; height: 36px; }
-  .social-rail svg { width: 17px; height: 17px; }
+  .social-rail a { width: 44px; height: 44px; }
+  .social-rail svg { width: 21px; height: 21px; }
 }
