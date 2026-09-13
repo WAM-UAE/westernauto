@@ -676,6 +676,69 @@ section { padding: 72px 0; }
 .blog-card .read-more { font-weight: 700; color: var(--brass); font-size: 0.88rem; margin-top: 6px; }
 .blog-card .read-more:hover { color: var(--white); }
 
+/* ==========================================================================
+   Offers
+   ========================================================================== */
+
+.offer-card {
+  background: var(--tideline);
+  border: 1px solid rgba(193,137,47,0.35);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.offer-badge {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--brass);
+  line-height: 1;
+  text-align: center;
+  border: 2px solid var(--brass);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.offer-badge .pct { font-size: 2.6rem; }
+.offer-badge .word {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-top: 2px;
+}
+.offer-body .offer-label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: var(--brass);
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+.offer-body h3 { font-size: 1.6rem; margin-bottom: 12px; }
+.offer-body p { color: var(--white); font-size: 1rem; margin-bottom: 14px; }
+.offer-terms {
+  font-size: 0.82rem;
+  color: var(--dune);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 14px;
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .offer-card { grid-template-columns: 1fr; text-align: center; justify-items: center; padding: 32px 24px; }
+}
+
 .article-meta {
   color: var(--dune);
   font-size: 0.9rem;
