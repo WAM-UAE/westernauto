@@ -465,7 +465,7 @@ section { padding: 72px 0; }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0;
-  border: 1px solid var(--dune-2);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -473,23 +473,20 @@ section { padding: 72px 0; }
   padding: 36px 32px;
   display: flex;
   flex-direction: column;
+  background: var(--tideline);
+  color: var(--dune);
 }
-.divide-panel.land { background: var(--dune-2); }
-.divide-panel.sea { background: var(--tideline); color: var(--dune); }
 .divide-panel .divide-eyebrow {
   font-family: var(--font-display);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-size: 0.78rem;
   margin-bottom: 10px;
+  color: var(--brass);
 }
-.divide-panel.land .divide-eyebrow { color: var(--brass-dark); }
 .divide-panel.trails .divide-eyebrow { color: var(--rust); }
-.divide-panel.sea .divide-eyebrow { color: var(--brass); }
-.divide-panel h3 { font-size: 1.3rem; margin-bottom: 10px; }
-.divide-panel.sea h3 { color: var(--white); }
-.divide-panel p { font-size: 0.95rem; color: var(--ink-text); flex-grow: 1; }
-.divide-panel.sea p { color: var(--dune); }
+.divide-panel h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--white); }
+.divide-panel p { font-size: 0.95rem; color: var(--dune); flex-grow: 1; }
 .divide-panel .panel-link {
   display: inline-block;
   margin-top: 18px;
@@ -498,11 +495,9 @@ section { padding: 72px 0; }
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--brass-dark);
+  color: var(--brass);
 }
-.divide-panel .panel-link:hover { color: var(--ink); }
-.divide-panel.sea .panel-link { color: var(--brass); }
-.divide-panel.sea .panel-link:hover { color: var(--white); }
+.divide-panel .panel-link:hover { color: var(--white); }
 
 /* ==========================================================================
    Values / cards grid
