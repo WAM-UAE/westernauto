@@ -322,7 +322,10 @@ body { top: 0 !important; }
    ========================================================================== */
 
 section { padding: 72px 0; }
-.section-dune { background: var(--dune); }
+.section-dune { background: var(--ink); color: var(--white); }
+.section-dune h2, .section-dune h3, .section-dune h4 { color: var(--brass); }
+.section-dune .eyebrow { color: var(--brass); }
+.section-dune .section-head p { color: var(--white); }
 .section-white { background: var(--ink); color: var(--white); }
 .section-white h2, .section-white h3, .section-white h4 { color: var(--brass); }
 .section-white .eyebrow { color: var(--brass); }
