@@ -142,7 +142,15 @@ a:focus-visible, button:focus-visible {
 }
 .main-nav a:hover { color: var(--brass); }
 
-.header-actions { display: flex; align-items: center; gap: 16px; }
+.header-actions { display: flex; align-items: center; gap: 14px; margin-left: 28px; }
+
+.btn.btn-whatsapp-header {
+  background: #25D366;
+  color: #06140C;
+  padding: 9px 16px;
+  font-size: 0.76rem;
+}
+.btn.btn-whatsapp-header:hover { background: #1EBE57; transform: translateY(-1px); }
 
 .lang-toggle {
   background: none;
