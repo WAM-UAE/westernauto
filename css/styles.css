@@ -431,6 +431,13 @@ section { padding: 72px 0; }
   gap: 24px;
   margin-bottom: 44px;
 }
+.photo-duo-rounded .section-photo,
+.photo-duo-rounded .section-photo img {
+  border-radius: 24px;
+}
+@media (max-width: 720px) {
+  .photo-duo { grid-template-columns: 1fr; }
+}
 
 .gallery-grid {
   display: grid;
