@@ -142,6 +142,53 @@ a:focus-visible, button:focus-visible {
 }
 .main-nav a:hover { color: var(--brass); }
 
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-dropdown-toggle .caret {
+  font-size: 0.6rem;
+  color: var(--brass);
+  transition: transform 0.15s ease;
+}
+.nav-dropdown:hover .nav-dropdown-toggle .caret { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 18px;
+  background: var(--tideline);
+  border: 1px solid rgba(193,137,47,0.3);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 2px 24px;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 200;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-dropdown-menu a {
+  padding: 7px 10px;
+  font-size: 0.85rem;
+  color: var(--dune);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { color: var(--brass); background: rgba(193,137,47,0.1); }
+
 .header-actions { display: flex; align-items: center; gap: 14px; margin-left: 28px; }
 
 .btn.btn-whatsapp-header {
