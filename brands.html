@@ -7,7 +7,7 @@
 <meta name="description" content="Western Auto and Marine services all major car brands in Ras Al Khaimah — from Alfa Romeo to Volvo, everyday drivers to exotics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=22">
+<link rel="stylesheet" href="css/styles.css?v=23">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
 <link rel="stylesheet" href="css/chatbot.css?v=3">
@@ -61,6 +61,52 @@
       <div class="eyebrow">Multi-Brand Servicing</div>
       <h2>We service all of these, and more</h2>
       <p>Don't see your make listed? Message us on WhatsApp &mdash; if it has an engine, chances are we've worked on one.</p>
+    </div>
+    <div class="brand-jump">
+      <label for="brandJumpSelect">Jump straight to a brand</label>
+      <select id="brandJumpSelect">
+        <option value="" selected disabled>Select a brand&hellip;</option>
+        <option value="brand-alfa-romeo.html">Alfa Romeo</option>
+        <option value="brand-aston-martin.html">Aston Martin</option>
+        <option value="brand-audi.html">Audi</option>
+        <option value="brand-bentley.html">Bentley</option>
+        <option value="brand-bmw.html">BMW</option>
+        <option value="brand-cadillac.html">Cadillac</option>
+        <option value="brand-chevrolet.html">Chevrolet</option>
+        <option value="brand-dodge.html">Dodge</option>
+        <option value="brand-ferrari.html">Ferrari</option>
+        <option value="brand-ford.html">Ford</option>
+        <option value="brand-gmc.html">GMC</option>
+        <option value="brand-honda.html">Honda</option>
+        <option value="brand-hummer.html">Hummer</option>
+        <option value="brand-hyundai.html">Hyundai</option>
+        <option value="brand-infiniti.html">Infiniti</option>
+        <option value="brand-jaguar.html">Jaguar</option>
+        <option value="brand-jeep.html">Jeep</option>
+        <option value="brand-kia.html">Kia</option>
+        <option value="brand-lamborghini.html">Lamborghini</option>
+        <option value="brand-land-rover.html">Land Rover</option>
+        <option value="brand-lexus.html">Lexus</option>
+        <option value="brand-lincoln.html">Lincoln</option>
+        <option value="brand-maserati.html">Maserati</option>
+        <option value="brand-mazda.html">Mazda</option>
+        <option value="brand-mclaren.html">McLaren</option>
+        <option value="brand-mercedes-benz.html">Mercedes-Benz</option>
+        <option value="brand-mg.html">MG</option>
+        <option value="brand-mini.html">Mini</option>
+        <option value="brand-mitsubishi.html">Mitsubishi</option>
+        <option value="brand-nissan.html">Nissan</option>
+        <option value="brand-peugeot.html">Peugeot</option>
+        <option value="brand-porsche.html">Porsche</option>
+        <option value="brand-renault.html">Renault</option>
+        <option value="brand-rolls-royce.html">Rolls-Royce</option>
+        <option value="brand-skoda.html">Skoda</option>
+        <option value="brand-suzuki.html">Suzuki</option>
+        <option value="brand-toyota.html">Toyota</option>
+        <option value="brand-volkswagen.html">Volkswagen</option>
+        <option value="brand-volvo.html">Volvo</option>
+      </select>
+      <button type="button" id="brandJumpGo" class="btn btn-brass">Go</button>
     </div>
     <div class="brand-grid">
       <a href="brand-alfa-romeo.html" class="brand-tile"><img src="img/brand-logos/alfa-romeo.svg" alt="Alfa Romeo logo"><span class="brand-name">Alfa Romeo</span></a>
@@ -158,6 +204,17 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var select = document.getElementById('brandJumpSelect');
+    var go = document.getElementById('brandJumpGo');
+    function jump() {
+      if (select.value) window.location.href = select.value;
+    }
+    select.addEventListener('change', jump);
+    go.addEventListener('click', jump);
+  })();
+</script>
 <script src="js/chatbot.js?v=3"></script>
 <div id="google_translate_element" style="display:none;"></div>
 <script src="js/translate.js?v=2"></script>
