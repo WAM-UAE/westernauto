@@ -1017,3 +1017,48 @@ section { padding: 72px 0; }
   .brand-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
   .brand-tile { padding: 16px 8px 14px; }
 }
+a.brand-tile { text-decoration: none; }
+
+/* ==========================================================================
+   Per-brand service pages
+   ========================================================================== */
+
+.brand-hero-row {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 6px;
+}
+.brand-hero-badge {
+  width: 92px;
+  height: 92px;
+  min-width: 92px;
+  border-radius: 50%;
+  border: 2px solid var(--brass);
+  background: var(--tideline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+.brand-hero-badge img { width: 50px; height: 50px; object-fit: contain; }
+.brand-hero-badge .brand-badge-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--brass);
+}
+.brand-crumb {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.76rem;
+  color: var(--brass);
+}
+.brand-crumb a { color: var(--dune); }
+.brand-crumb a:hover { color: var(--brass); }
+@media (max-width: 560px) {
+  .brand-hero-row { gap: 18px; }
+  .brand-hero-badge { width: 68px; height: 68px; min-width: 68px; }
+  .brand-hero-badge img { width: 38px; height: 38px; }
+}
