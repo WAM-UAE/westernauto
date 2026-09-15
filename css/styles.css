@@ -847,6 +847,11 @@ section { padding: 72px 0; }
 .rating-summary .rating-count { font-size: 0.85rem; color: var(--dune); margin-bottom: 22px; }
 .rating-summary .btn { width: 100%; }
 
+.review-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .review-card {
   background: var(--tideline);
   border: 1px solid rgba(255,255,255,0.1);
