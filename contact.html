@@ -7,7 +7,7 @@
 <meta name="description" content="Get in touch with Western Auto & Marine LLC in Ras Al Khaimah. Call, WhatsApp, or visit us to book a service.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=17">
+<link rel="stylesheet" href="css/styles.css?v=18">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
 <link rel="stylesheet" href="css/chatbot.css?v=3">
@@ -38,6 +38,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
+      <a href="contact.html#book" class="btn btn-book-header">Book Online</a>
       <a href="https://wa.me/971567442244?text=Hi%2C%20I%20saw%20your%20website%20and%20wanted%20to%20book%20an%20appointment" class="btn btn-whatsapp-header">Book on WhatsApp</a>
       <button type="button" class="lang-toggle" id="langToggle" aria-label="Translate to Arabic" title="Translate to Arabic"><svg class="flag-icon" viewBox="0 0 60 40" width="22" height="15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#fff"/><rect width="60" height="13.33" fill="#00732f"/><rect y="26.67" width="60" height="13.33" fill="#000"/><rect width="15" height="40" fill="#ef3340"/></svg></button>
     </div>
@@ -84,6 +85,65 @@
         <p>Monday &ndash; Saturday: 08:30 &ndash; 19:00<br>Sunday: Closed</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section-dune" id="book">
+  <div class="container">
+    <div class="section-head" style="margin-left: auto; margin-right: auto; text-align: center;">
+      <div class="eyebrow">Book Online</div>
+      <h2>Request a booking</h2>
+      <p>Prefer not to use WhatsApp? Fill this in and we'll confirm your slot by phone or WhatsApp — usually within a few hours during opening times.</p>
+    </div>
+    <form id="bookingForm" class="booking-form" action="https://formsubmit.co/ajax/chris@wam-uae.com" method="POST">
+      <input type="hidden" name="_subject" value="New booking request — Western Auto and Marine website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="booking-honey" tabindex="-1" autocomplete="off">
+      <div class="booking-grid">
+        <div class="booking-field">
+          <label for="bookName">Full Name</label>
+          <input type="text" id="bookName" name="Name" required>
+        </div>
+        <div class="booking-field">
+          <label for="bookPhone">Phone Number</label>
+          <input type="tel" id="bookPhone" name="Phone" placeholder="+971 5X XXX XXXX" required>
+        </div>
+        <div class="booking-field">
+          <label for="bookVehicle">Vehicle / Equipment</label>
+          <input type="text" id="bookVehicle" name="Vehicle" placeholder="e.g. Toyota Land Cruiser" required>
+        </div>
+        <div class="booking-field">
+          <label for="bookService">Service Needed</label>
+          <select id="bookService" name="Service" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Auto Repair &amp; Servicing</option>
+            <option>Marine Equipment</option>
+            <option>Offroad Equipment</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="booking-field">
+          <label for="bookDate">Preferred Date</label>
+          <input type="date" id="bookDate" name="Preferred Date" required>
+        </div>
+        <div class="booking-field">
+          <label for="bookTime">Preferred Time</label>
+          <select id="bookTime" name="Preferred Time" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Morning (08:30 &ndash; 12:00)</option>
+            <option>Afternoon (12:00 &ndash; 15:30)</option>
+            <option>Late Afternoon (15:30 &ndash; 19:00)</option>
+          </select>
+        </div>
+        <div class="booking-field full">
+          <label for="bookNotes">Anything else we should know?</label>
+          <textarea id="bookNotes" name="Notes" placeholder="Symptoms, noises, what's not working — anything that helps us prep before you arrive."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-brass">Request Booking</button>
+      <div id="bookingStatus" class="booking-status" role="status"></div>
+    </form>
   </div>
 </section>
 
@@ -140,6 +200,7 @@
 </footer>
 
 <script src="js/chatbot.js?v=3"></script>
+<script src="js/booking.js?v=1"></script>
 <div id="google_translate_element" style="display:none;"></div>
 <script src="js/translate.js?v=2"></script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
