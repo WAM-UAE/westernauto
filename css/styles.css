@@ -81,7 +81,17 @@ a:focus-visible, button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(27deg, #151515 5px, transparent 5px),
+    linear-gradient(207deg, #151515 5px, transparent 5px),
+    linear-gradient(27deg, #151515 5px, transparent 5px),
+    linear-gradient(207deg, #151515 5px, transparent 5px),
+    linear-gradient(90deg, #181818 10px, transparent 10px),
+    linear-gradient(#181818 25%, transparent 25%, transparent 75%, #181818 75%, #181818);
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  background-position: 0 0, 0 0, 10px 10px, 10px 10px, 0 0, 0 0;
   border-bottom: 1px solid rgba(193, 137, 47, 0.25);
 }
 
@@ -661,7 +671,17 @@ a.service-item:hover .icon { color: var(--white); }
    ========================================================================== */
 
 .site-footer {
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(27deg, #151515 5px, transparent 5px),
+    linear-gradient(207deg, #151515 5px, transparent 5px),
+    linear-gradient(27deg, #151515 5px, transparent 5px),
+    linear-gradient(207deg, #151515 5px, transparent 5px),
+    linear-gradient(90deg, #181818 10px, transparent 10px),
+    linear-gradient(#181818 25%, transparent 25%, transparent 75%, #181818 75%, #181818);
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  background-position: 0 0, 0 0, 10px 10px, 10px 10px, 0 0, 0 0;
   color: var(--dune);
   padding: 56px 0 24px;
 }
