@@ -1,3 +1,13 @@
+# Force the www subdomain onto the bare domain. Both currently serve
+# identical content with no redirect, which is what caused Google to
+# report every page as "Duplicate without user-selected canonical" —
+# it was crawling two live copies of the whole site.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.westernautoandmarine\.ae$ [NC]
+  RewriteRule ^(.*)$ https://westernautoandmarine.ae/$1 [L,R=301]
+</IfModule>
+
 # Cache control — prevents visitors' browsers from showing stale pages
 # after a deploy. HTML always revalidates with the server; CSS/JS are
 # safe to cache long-term because they're loaded with a manual ?v=N

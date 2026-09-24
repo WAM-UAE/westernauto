@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /competitor-analysis-2.html
+Disallow: /competitor-analysis-3.html
+Allow: /
+
+Sitemap: https://westernautoandmarine.ae/sitemap.xml
