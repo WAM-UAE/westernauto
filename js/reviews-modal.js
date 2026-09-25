@@ -1,6 +1,5 @@
 (function () {
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.review-card'));
-  if (!cards.length) return;
+  if (!document.querySelector('.review-cards')) return;
 
   var starSvg = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87L18.2 21 12 17.6 5.8 21 7 14.14l-5-4.87 7.1-1.01z"/></svg>';
 
@@ -43,8 +42,9 @@
     document.body.style.overflow = '';
   }
 
-  cards.forEach(function (card) {
-    card.addEventListener('click', function () { open(card); });
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('.review-card');
+    if (card) open(card);
   });
 
   closeBtn.addEventListener('click', close);
